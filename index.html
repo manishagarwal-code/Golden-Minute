@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golden Minute – trained help before the ambulance arrives</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top"><i></i>Golden Minute</a>
+    <nav>
+      <a href="#why">Why minutes matter</a>
+      <a href="#responders">Responders</a>
+      <a href="#cpr">CPR guide</a>
+      <a class="keep" href="#join"><strong>Become a responder</strong></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>A trained person is usually closer than the ambulance.</h1>
+      <p class="lead">Press SOS and Golden Minute alerts verified doctors, nurses and first-aid trained neighbours within 1.5 km. One of them walks to you while the app coaches you through CPR or bleeding control.</p>
+      <div class="cta">
+        <a class="btn btn-main" href="#join">Become a responder</a>
+        <a class="btn btn-quiet" href="#cpr">Practise CPR timing</a>
+      </div>
+      <small>Try the SOS flow on the phone. All people and distances shown are sample data.</small>
+    </div>
+
+    <div class="phone" aria-label="Golden Minute app demo">
+      <div class="screen" id="screen" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="why">
+  <div class="wrap">
+    <h2>An ambulance in India can take 20 minutes. A brain can’t wait that long.</h2>
+    <p style="margin-top:22px;color:var(--ink-2)">Survival from cardiac arrest drops by roughly 7–10% for every minute without CPR. The goal is to close the gap between the call and the ambulance with someone who can act.</p>
+    <div class="track" role="img" aria-label="Timeline: SOS at 0 minutes, responder at about 3 minutes, ambulance at about 20 minutes">
+      <div class="mark" style="left:1%"><span><b>0 min</b>SOS pressed, nearby responders alerted</span></div>
+      <div class="mark" style="left:16%"><span><b>~3 min</b>First responder starts compressions</span></div>
+      <div class="mark" style="left:99%"><span><b>~20 min</b>Ambulance arrives</span></div>
+    </div>
+    <p class="timeline-note">Gold is the stretch Golden Minute covers. Red is time with no trained help.</p>
+  </div>
+</section>
+
+<section id="responders">
+  <div class="wrap split">
+    <div>
+      <h2>Only people we have checked can answer an alert.</h2>
+      <p style="margin-top:22px;color:var(--ink-2)">Responders upload their ID and proof of training. We approve them before they ever see a patient’s location, and they appear only inside the radius of an active alert.</p>
+    </div>
+    <div class="responders">
+      <div><h3>Doctors and nurses</h3><p>Medical council or nursing council registration number, checked against the register.</p></div>
+      <div><h3>Paramedics and EMTs</h3><p>Certificate from a recognised ambulance or emergency care course.</p></div>
+      <div><h3>Retired medical staff and armed forces medics</h3><p>Service or hospital records, plus a short skills check on CPR and bleeding control.</p></div>
+      <div><h3>First-aid certified neighbours</h3><p>Valid Red Cross, St John or equivalent CPR certificate, renewed every two years.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="cpr">
+  <div class="wrap cpr">
+    <div class="metro">
+      <div class="ring" id="ring"><div><b id="bigCount">0</b><span>compressions</span></div></div>
+      <button class="btn btn-main" id="bigBtn" type="button">Start 110 beats per minute</button>
+      <div class="stats"><div><b id="bigTime">0:00</b>elapsed</div><div><b>5–6 cm</b>depth</div><div><b>110</b>per minute</div></div>
+    </div>
+    <div>
+      <h2>If someone collapses and isn’t breathing, push. Don’t wait.</h2>
+      <ol class="steps">
+        <li>Call 112 or 102 and put the phone on speaker.<span>Then press SOS in Golden Minute so a trained person starts walking to you.</span></li>
+        <li>Lay the person on their back on a firm surface.<span>Kneel beside the chest, shoulders directly above your hands.</span></li>
+        <li>Place the heel of one hand on the centre of the chest, other hand on top.<span>Lock your elbows.</span></li>
+        <li>Push hard and fast to the beat, about 5–6 cm deep.<span>Let the chest rise fully each time. Don’t stop until help takes over or an AED tells you to.</span></li>
+      </ol>
+      <div class="bleed">
+        <h3>Heavy bleeding</h3>
+        <p style="margin-top:8px">Press firmly on the wound with a clean cloth and keep pressing. If blood soaks through, add more cloth on top; don’t lift it. Raise the limb if you can.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap split">
+    <div>
+      <h2>Live near a school, market or housing society? Be the one who answers.</h2>
+      <p style="margin-top:22px;color:var(--ink-2)">We’re onboarding the first responders in Delhi NCR. Applying takes about three minutes, and you choose when you’re available.</p>
+    </div>
+    <form id="joinForm">
+      <label>Full name<input name="name" required autocomplete="name"></label>
+      <label>You are a
+        <select name="role" required>
+          <option value="">Select one</option>
+          <option>Doctor</option><option>Nurse</option><option>Paramedic or EMT</option>
+          <option>Retired medical or forces staff</option><option>First-aid certified</option>
+        </select>
+      </label>
+      <label>Registration or certificate number<input name="reg" required></label>
+      <label>Locality<input name="loc" placeholder="e.g. Sector 21, Dwarka" required></label>
+      <button class="btn btn-main" type="submit">Apply to be a responder</button>
+      <p id="joined" hidden>Application saved for this demo. A live version would now ask you to upload your ID and certificate.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>In an emergency, call 112 first.</strong> Golden Minute is a prototype. It supports the emergency services; it does not replace them, and no real alerts are sent from this page.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
